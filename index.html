@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <!-- Font Awesome for location icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="weather-app">
+    <div class="weather-header">
+      <h1>Weather Forcast</h1>
+      <p>Search for a city or use your current location</p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off">
+      <button id="search-btn">Search</button>
+      <ul id="suggestions"></ul>
+    </div>
+
+    <!-- Location Button -->
+    <button class="location-btn" onclick="getLocation()">
+      <i class="fas fa-location-arrow"></i>
+    </button>
+
+    <div class="weather-info">
+      <div class="location">
+        <h2 id="city-name">Fetching Location...</h2>
+        <p id="date"></p>
+      </div>
+      <!-- <div class="weather-icon">
+        <img id="weather-icon" src="" alt="Weather Icon">
+      </div> -->
+      <div class="temperature">
+        <h1 id="temp">-°C</h1>
+        <p id="description">Fetching weather...</p>
+      </div>
+      <div class="details">
+        <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+        <p><strong>Wind Speed:</strong> <span id="wind-speed">--</span> km/h</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
